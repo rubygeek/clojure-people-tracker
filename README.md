@@ -40,6 +40,8 @@ WIP (update-person "bob" {:fields-to-add "data"})
 
 (update "name") - finds the name and then ask for an update and a date to remind you 
 * add spec to validate data
+* enforce each add/update to have a date
+* delete only deactives the contact no deletion
 * create generated tests with spec
 * add more interactive prompts when using repl 
 * add datomic to store data
