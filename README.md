@@ -32,13 +32,12 @@ Use the dev namespace
 
 (remove-person "bob")
 
-WIP (update-person "bob" {:fields-to-add "data"}) 
+(update-person "bob" {:fields-to-add "data"}) 
 
 ### Future Ideas
 
 (top3) - list the top three people to contact by order of last contacted
 
-(update "name") - finds the name and then ask for an update and a date to remind you 
 * add spec to validate data
 * enforce each add/update to have a date
 * delete only deactives the contact no deletion
@@ -48,10 +47,4 @@ WIP (update-person "bob" {:fields-to-add "data"})
 * export to edn and save to file
 * load from edn file
 * create a web interface 
-
-
-
-
-
-
 
