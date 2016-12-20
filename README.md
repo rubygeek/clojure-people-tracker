@@ -32,7 +32,7 @@ Use the dev namespace
 
 (remove-person "bob")
 
-#WIP (update-person "bob" {:fields-to-add "data"}) 
+WIP (update-person "bob" {:fields-to-add "data"}) 
 
 ### Future Ideas
 
