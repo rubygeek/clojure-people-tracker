@@ -1,6 +1,6 @@
-(ns people-tracker.core
-  )
+(ns people-tracker.core)
 
+;; user map
 ;;    name: str  
 ;;    company: str
 ;;    email: str
@@ -9,19 +9,20 @@
 
 (def people (atom []))
 
-(defn list-people [] 
-  @people)
-
-;; side effects
-(defn display-list-people []
+;; this function has side effects - println
+(defn display-list []
   (doall (map-indexed #(println %1 ":" (:name %2)) @people ))
   (println "----")
   :done )
+
+;; internal functions
 
 (defn remove-at-index [coll idx] 
   (flatten (conj (subvec coll 0 idx) (subvec coll (inc idx)))))
 
 
+;; repl functions 
+ 
 (defn add-person
   ([person-data]
     (add-person people person-data)) 
@@ -37,4 +38,5 @@
        (reset! people (remove-at-index @people idx))
        @people))))
 
+;; todo
 (defn update-person [name data])
