@@ -8,8 +8,9 @@
 
 (deftest remove-person-test 
   (let [people (atom [{:name "bob"} {:name "sal"} {:name "jay"}])
-        after-sal (core/remove-person people "sal")
-        duplicate-call (core/remove-person people "sal")]
-    (is (= [{:name "bob"} {:name "jay"}] after-sal))
+        after-remove-sal (core/remove-person people "sal")
+        duplicate-call   (core/remove-person people "sal")]
+    (is (= [{:name "bob"} {:name "jay"}] after-remove-sal))
     (is (= [{:name "bob"} {:name "jay"}] duplicate-call))))
+
 

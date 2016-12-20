@@ -24,7 +24,7 @@
 
 (defn add-person
   ([person-data]
-    (add-person @people person-data)) 
+    (add-person people person-data)) 
   ([people person-data]
    (swap! people conj person-data)))
 

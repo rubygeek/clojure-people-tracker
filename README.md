@@ -11,7 +11,6 @@ API
 ### internal
 
 find-person
-
 add-person
 
 list-all (sort param) 
