@@ -4,6 +4,7 @@ A small app to keep track of people, last contact date and history
 
 ## Example
 
+```
 user=> (dev)
 
 dev=> (core/add-person {:name "bob" :last-contact "12/1/2016"})
@@ -17,7 +18,7 @@ dev=> (core/display-list)
 1 : sally
 ----
 :done
-
+```
 
 ## Usage
 
@@ -31,7 +32,7 @@ Use the dev namespace
 
 (remove-person "bob")
 
-#WIP (update-person "bob" {:fields-to-add "data"}) 
+WIP (update-person "bob" {:fields-to-add "data"}) 
 
 ### Future Ideas
 
@@ -39,6 +40,8 @@ Use the dev namespace
 
 (update "name") - finds the name and then ask for an update and a date to remind you 
 * add spec to validate data
+* enforce each add/update to have a date
+* delete only deactives the contact no deletion
 * create generated tests with spec
 * add more interactive prompts when using repl 
 * add datomic to store data
