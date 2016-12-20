@@ -4,6 +4,7 @@ A small app to keep track of people, last contact date and history
 
 ## Example
 
+```
 user=> (dev)
 
 dev=> (core/add-person {:name "bob" :last-contact "12/1/2016"})
@@ -17,7 +18,7 @@ dev=> (core/display-list)
 1 : sally
 ----
 :done
-
+```
 
 ## Usage
 
