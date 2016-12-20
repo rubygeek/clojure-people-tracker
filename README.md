@@ -2,9 +2,28 @@
 
 A small app to keep track of people, last contact date and history
 
+## Example
+
+user=> (dev)
+
+dev=> (core/add-person {:name "bob" :last-contact "12/1/2016"})
+[{:name "bob", :last-contact "12/1/2016"}]
+
+dev=> (core/add-person {:name "sally" :last-contact "12/7/2016"})
+[{:name "bob", :last-contact "12/1/2016"} {:name "sally", :last-contact "12/7/2016"}]
+
+dev=> (core/display-list)
+0 : bob
+1 : sally
+----
+:done
+
+
 ## Usage
 
 Start a repl in the project and use these functions to interact with it, most functions can take an atom as a first param so we can pass in anatom for testing. Otherwise it uses the globally defined `people` atom.
+
+Use the dev namespace
 
 (display-list) = list all the people you are traking
 
@@ -12,7 +31,7 @@ Start a repl in the project and use these functions to interact with it, most fu
 
 (remove-person "bob")
 
-(update-person "bob" {:fields-to-add "data"}) 
+#WIP (update-person "bob" {:fields-to-add "data"}) 
 
 ### Future Ideas
 
