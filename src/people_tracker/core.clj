@@ -1,6 +1,6 @@
-(ns people-tracker.core
-  )
+(ns people-tracker.core)
 
+;; user map
 ;;    name: str  
 ;;    company: str
 ;;    email: str
@@ -8,9 +8,6 @@
 ;;    active: false
 
 (def people (atom []))
-
-(defn list-people [] 
-  @people)
 
 ;; helper functions
 
@@ -20,14 +17,14 @@
 (defn find-index [name]
   (.indexOf @people {:name name}))
 
-;; side effects
-
-(defn display-list-people []
+;; this function has side effects - println
+(defn display-list []
   (doall (map-indexed #(println %1 ":" (:name %2)) @people ))
   (println "----")
-  :done )
+  :done)
 
-
+;; repl functions 
+ 
 (defn add-person
   ([person-data]
     (add-person people person-data)) 
@@ -55,3 +52,4 @@
       (if (not= idx -1)
         (swap! people assoc idx updated)
         :invalid-update))))
+
