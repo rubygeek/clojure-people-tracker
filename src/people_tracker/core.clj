@@ -33,8 +33,6 @@
   ([people person-data]
    (swap! people conj person-data)))
 
-;; consider returning exception when idx not found 
-
 (defn remove-person
   ([name]
     (remove-person people name))
@@ -53,5 +51,5 @@
          updated (merge person data)]
      (if (not= idx -1)
        (swap! people assoc idx updated)
-       (str "could not find index: " idx)))))
+       @people))))
 
