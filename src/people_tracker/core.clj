@@ -22,8 +22,7 @@
 
 ;; this function has side effects - println
 (defn display-list []
-  (doall (map-indexed #(println %1 ":" (:name %2)) @people ))
-  :done)
+  (doall (map-indexed #(println %1 ":" (:name %2)) @people )))
 
 ;; repl functions 
  
